@@ -1,0 +1,95 @@
+@@ -1,52 +1,30 @@
+.footer{
+  background: $fond-gris-footer;
+
+  &-global{
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem 2rem;
+  }
+  &-logo{
+    font-family: $font-cursive;
+    color: white;
+footer {
+  background-color: #353535;
+  padding: 25px;
+  color: white;
+}
+  h3 {
+    font-family: "Shrikhand", "sans-serif";
+    padding: 5px 0 20px 0;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+  }
+  ul {
+    list-style-type: none;
+
+  &-text{
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    color: white;
+    line-height: 1.5rem;
+    &-icon{
+      font-size: .8rem;
+      width: 1.5rem;
+    li {
+      padding: 5px 0 5px 0;
+
+      a {
+        color: white;
+      }
+    }
+  }
+}
+.footer-text:hover{
+  color: $color-secondary;
+  transition: .3s;
+}
+
+@media screen and (min-width:768px){
+  .footer{
+    &-global{
+      width: 95%;
+      flex-direction: row;
+      align-items: baseline;
+      justify-content: space-between;
+      padding: 1.5rem;
+    .fa-utensils {
+      margin-right: 12px;
+    }
+    .fa-hands-helping {
+      margin-right: 5px;
+    }
+  }
+
+}
+.fa-handshake {
+  transform: rotate(-45deg);
+}
+.fa-utensils {
+  padding-right: 5px;
+}
+6 sass/Utils/_mixins.scss
+@@ -158,4 +158,10 @@
+  @media screen and (min-width:map-get($breakpoints, large)){
+    @content;
+  }
+}
+
+@mixin medium-screen {
+  @media screen and (min-width: map-get($breakpoints, medium)) {
+    @content;
+  }
+}
+2 sass/Utils/_variables.scss
+@@ -4,5 +4,5 @@ $color-primary: #9356DC;
+$color-secondary: #FF79DA;
+$color-tertiary: #99E2D0;
+$linear-gradient:linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+$fond-gris-footer : #353535;
+$fond-gris-footer: #353535;
+$font-cursive: 'Shrikhand', cursive;
