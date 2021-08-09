@@ -1,95 +1,83 @@
-@@ -1,52 +1,30 @@
-.footer{
-  background: $fond-gris-footer;
-
-  &-global{
-    max-width: 1440px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    padding: 1.5rem 2rem;
-  }
-  &-logo{
-    font-family: $font-cursive;
-    color: white;
-footer {
-  background-color: #353535;
-  padding: 25px;
-  color: white;
+body, html {
+  margin: 0;
+  font-family: Roboto,sans-serif;
+  scroll-behavior: smooth;
 }
-  h3 {
-    font-family: "Shrikhand", "sans-serif";
-    padding: 5px 0 20px 0;
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
-    font-weight: 500;
-  }
-  ul {
-    list-style-type: none;
 
-  &-text{
+.page {
+  position: fixed;
+  z-index: 99999;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  visibility: hidden;
+  -webkit-transition: visibility 3s;
+  -o-transition: visibility 3s;
+  transition: visibility 3s;
+}
+.loaderpage{
+ 
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 200px;
+    border: 5px solid #f2f2f2;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     align-items: center;
-    font-size: 1rem;
-    color: white;
-    line-height: 1.5rem;
-    &-icon{
-      font-size: .8rem;
-      width: 1.5rem;
-    li {
-      padding: 5px 0 5px 0;
-
-      a {
-        color: white;
-      }
-    }
-  }
-}
-.footer-text:hover{
-  color: $color-secondary;
-  transition: .3s;
 }
 
-@media screen and (min-width:768px){
-  .footer{
-    &-global{
-      width: 95%;
-      flex-direction: row;
-      align-items: baseline;
-      justify-content: space-between;
-      padding: 1.5rem;
-    .fa-utensils {
-      margin-right: 12px;
-    }
-    .fa-hands-helping {
-      margin-right: 5px;
-    }
-  }
-
+.page::after {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  border: 5px solid transparent;
+      border-top-color: transparent;
+      border-bottom-color: transparent;
+  border-radius: 200px;
+  border-top-color: #000;
+  border-bottom-color: #9356dc;
+  -webkit-animation: spin 2s linear infinite;
+  -moz-animation: spin 2s linear infinite;
 }
-.fa-handshake {
-  transform: rotate(-45deg);
+.headerlogo {
+  text-align: center;
+  padding: 1rem 0 0 0;
 }
-.fa-utensils {
-  padding-right: 5px;
 }
-6 sass/Utils/_mixins.scss
-@@ -158,4 +158,10 @@
-  @media screen and (min-width:map-get($breakpoints, large)){
-    @content;
-  }
+}
+}
+.reservationSearch {
+  margin: 3rem 0 0 0;
 }
 
-@mixin medium-screen {
-  @media screen and (min-width: map-get($breakpoints, medium)) {
-    @content;
-  }
+.boutton {
+  color: #fff;
+  margin: 4rem 0 3.5rem 0;
+  border-radius: 2rem;
+  border: 0;
+  -webkit-box-shadow: 3px 3px 3px #dedada;
+  box-shadow: 3px 3px 3px #dedada;
+  font-size: 1.5rem;
+  padding: 1rem;
+  background-image: -o-radial-gradient(20px 0, ellipse farthest-corner, #FF79DA 0%, #9356DC 100%);
+  background-image: radial-gradient(ellipse farthest-corner at 20px 0, #FF79DA 0%, #9356DC 100%);
+  cursor: pointer;
 }
-2 sass/Utils/_variables.scss
-@@ -4,5 +4,5 @@ $color-primary: #9356DC;
-$color-secondary: #FF79DA;
-$color-tertiary: #99E2D0;
-$linear-gradient:linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
-$fond-gris-footer : #353535;
-$fond-gris-footer: #353535;
-$font-cursive: 'Shrikhand', cursive;
+
