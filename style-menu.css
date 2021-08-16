@@ -308,7 +308,6 @@ header .header__logo a {
       -ms-flex-align: center;
           align-items: center;
 }
-
 @-webkit-keyframes rotate {
   0% {
     -webkit-transform: rotate(0);
