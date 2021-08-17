@@ -236,8 +236,14 @@ body {
   transition: .3s;
   -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.6);
           box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.6);
-  background: white;
+
+
+   background-color: #e4d5f6;
+    color: #000;
+    -webkit-box-shadow: 3px 3px 20px #c6bfbf;
+    box-shadow: 3px 3px 20px #c6bfbf;
 }
+
 
 .fonctionNumber {
   background-color: #9356DC;
@@ -252,7 +258,12 @@ body {
 .fonctionIcon {
   color: #7E7E7E;
   margin: 0 20px;
+
 }
+.fonctionIcon :hover{
+  color:#9356DC
+}
+
 
 .fonctionsteps {
   display: -webkit-box;
